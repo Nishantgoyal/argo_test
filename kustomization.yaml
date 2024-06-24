@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: applications
 
 resources:
+  - namespace.yaml
   - nginx-deployment.yaml
 #   - argocd/argocd-app.yaml
 #   - argocd-resources/argocd-app.yaml
