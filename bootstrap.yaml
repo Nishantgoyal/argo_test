@@ -9,7 +9,6 @@ spec:
   project: default
   destination:
     namespace: argocd
-    name: in-cluster
   source:
     repoURL: https://github.com/Nishantgoyal/argo_test.git
     targetRevision: master
