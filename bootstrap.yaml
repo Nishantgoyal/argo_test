@@ -11,7 +11,7 @@ spec:
     namespace: argocd
     name: in-cluster
   source:
-    repoURL: https://github.com/dragonfruit-ai/df-ops-cluster.git
+    repoURL: https://github.com/Nishantgoyal/argo_test.git
     targetRevision: master
     path: .
     kustomize:
