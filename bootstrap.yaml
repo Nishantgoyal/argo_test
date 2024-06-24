@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ops-cluster
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: argocd
+    name: in-cluster
+  source:
+    repoURL: https://github.com/dragonfruit-ai/df-ops-cluster.git
+    targetRevision: master
+    path: .
+    kustomize:
+      version: v4.5.7
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+      allowEmpty: true
